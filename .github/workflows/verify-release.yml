@@ -1,0 +1,44 @@
+name: Verify public release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.release.draft == false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate release assets
+        if: ${{ github.event_name == 'release' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          mkdir release-assets
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --dir release-assets
+
+          test -f release-assets/supershadowmountplusflz.elf
+          test -f release-assets/supershadowmountplusflz.elf.sha256
+
+          (
+            cd release-assets
+            sha256sum -c supershadowmountplusflz.elf.sha256
+          )
+
+          source_count="$(find release-assets -maxdepth 1 -type f \( -name '*source*.tar.gz' -o -name '*source*.tar.xz' -o -name '*source*.zip' \) | wc -l)"
+          if [ "$source_count" -lt 1 ]; then
+            echo "::error::Corresponding-source archive is missing from the release."
+            exit 1
+          fi
+
+          echo "Release $TAG passed asset and SHA-256 verification."
+
+      - name: Manual workflow check
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: echo "Public release verification workflow is installed and valid."
