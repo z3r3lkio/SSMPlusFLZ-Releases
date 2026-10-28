@@ -1,6 +1,6 @@
-# SuperShadowMountPlus FLZ
+# Super Shadowmount Plus FLZ
 
-Public distribution repository for **SuperShadowMountPlus FLZ (SSMPlusFLZ)**.
+Public distribution repository for **Super Shadowmount Plus FLZ (SSMPlusFLZ)**.
 
 This repository intentionally contains only public documentation, release metadata, and release verification automation. Development, patching, and build infrastructure are maintained separately in the private development repository.
 
