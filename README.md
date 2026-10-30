@@ -16,6 +16,21 @@ Please support and follow the original project:
 - **Upstream:** https://github.com/drakmor/ShadowMountPlus
 - **Upstream releases:** https://github.com/drakmor/ShadowMountPlus/releases
 
+
+## Payload Manager source
+
+This repository can be added directly as a custom source in **PS5 Payload Manager**.
+
+Use this catalog URL:
+
+```text
+https://raw.githubusercontent.com/z3r3lkio/SSMPlusFLZ-Releases/main/payloads.json
+```
+
+In Payload Manager, open **Settings → Manage Sources → Add Source**, paste the URL above, and add it.
+
+The catalog uses a stable payload ID so favorites and autoload entries survive version updates. It is updated automatically whenever a new Super Shadowmount Plus FLZ release is published and includes the current version, direct ELF download URL, release date, and SHA-256 checksum.
+
 ## Releases
 
 Each public release inherits the corresponding Drakmor ShadowMountPlus version.

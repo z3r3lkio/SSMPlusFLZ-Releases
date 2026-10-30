@@ -13,6 +13,9 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.release.draft == false }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v7
+
       - name: Validate release assets
         if: ${{ github.event_name == 'release' }}
         env:
@@ -37,7 +40,27 @@ jobs:
             exit 1
           fi
 
-          echo "Release $TAG passed asset and SHA-256 verification."
+          expected_checksum="$(awk '{print $1}' release-assets/supershadowmountplusflz.elf.sha256)"
+          expected_version="${TAG%%-ssmplusflz-r*}"
+          expected_url="https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/supershadowmountplusflz.elf"
+
+          jq -e --arg checksum "$expected_checksum" \
+                --arg version "$expected_version" \
+                --arg url "$expected_url" '
+            .name == "Super Shadowmount Plus FLZ" and
+            (.payloads | type == "array") and
+            ([
+              .payloads[] |
+              select(.id == "super-shadowmount-plus-flz") |
+              .name == "Super Shadowmount Plus FLZ" and
+              .filename == "supershadowmountplusflz.elf" and
+              .url == $url and
+              .version == $version and
+              .checksum == $checksum
+            ] | any)
+          ' payloads.json >/dev/null
+
+          echo "Release $TAG passed asset, SHA-256, and Payload Manager manifest verification."
 
       - name: Manual workflow check
         if: ${{ github.event_name == 'workflow_dispatch' }}

@@ -1,0 +1,19 @@
+{
+  "name": "Super Shadowmount Plus FLZ",
+  "payloads": [
+    {
+      "id": "super-shadowmount-plus-flz",
+      "name": "Super Shadowmount Plus FLZ",
+      "filename": "supershadowmountplusflz.elf",
+      "url": "https://github.com/z3r3lkio/SSMPlusFLZ-Releases/releases/download/1.7beta11-ssmplusflz-r13/supershadowmountplusflz.elf",
+      "description": "PS5 payload based on Drakmor's ShadowMountPlus with folder-format LZ, .exlz and .flz support.",
+      "version": "1.7beta11",
+      "last_update": "2026-10-29",
+      "category": "Utilities",
+      "checksum": "177f6923c22c46df19e5e70749e33d0b4c2f3d7e43e9ce808cd985c3267e3d94",
+      "author": "z3r3lkio / Drakmor",
+      "details_url": "https://github.com/z3r3lkio/SSMPlusFLZ-Releases",
+      "source": "https://github.com/z3r3lkio/SSMPlusFLZ-Releases"
+    }
+  ]
+}
