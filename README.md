@@ -22,11 +22,11 @@ Please support and follow the original project:
 <!-- latest-release:start -->
 **Super Shadowmount Plus FLZ 1.7beta11 by @FLZZilla**
 
-- Release: `1.7beta11-ssmplusflz-r14`
-- Published: `2026-10-30`
+- Release: `1.7beta11-ssmplusflz-r15`
+- Published: `2026-10-31`
 - Binary: `supershadowmountplusflz.elf`
-- SHA-256: `3957d73293ef9d4a8f8a4989c4c8c609922b13752745f8b9807a389f08340f89`
-- Download: https://github.com/z3r3lkio/SSMPlusFLZ-Releases/releases/tag/1.7beta11-ssmplusflz-r14
+- SHA-256: `2857524bec1338d9caf1c7b22c75a026f683afa0eabdd9c947349e5cf221a679`
+- Download: https://github.com/z3r3lkio/SSMPlusFLZ-Releases/releases/tag/1.7beta11-ssmplusflz-r15
 
 <!-- latest-release:end -->
 
