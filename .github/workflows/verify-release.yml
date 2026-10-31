@@ -47,12 +47,12 @@ jobs:
           jq -e --arg checksum "$expected_checksum" \
                 --arg version "$expected_version" \
                 --arg url "$expected_url" '
-            .name == "Super Shadowmount Plus FLZ" and
+            .name == "Super Shadowmount Plus FLZ by @FLZZilla" and
             (.payloads | type == "array") and
             ([
               .payloads[] |
               select(.id == "super-shadowmount-plus-flz") |
-              .name == "Super Shadowmount Plus FLZ" and
+              .name == "Super Shadowmount Plus FLZ by @FLZZilla" and
               .filename == "supershadowmountplusflz.elf" and
               .url == $url and
               .version == $version and

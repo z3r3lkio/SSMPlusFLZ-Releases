@@ -1,6 +1,6 @@
-# Super Shadowmount Plus FLZ
+# Super Shadowmount Plus FLZ by @FLZZilla
 
-Public distribution repository for **Super Shadowmount Plus FLZ (SSMPlusFLZ)**.
+Public distribution repository for **Super Shadowmount Plus FLZ by @FLZZilla (SSMPlusFLZ)**.
 
 This repository intentionally contains only public documentation, release metadata, and release verification automation. Development, patching, and build infrastructure are maintained separately in the private development repository.
 
@@ -16,6 +16,19 @@ Please support and follow the original project:
 - **Upstream:** https://github.com/drakmor/ShadowMountPlus
 - **Upstream releases:** https://github.com/drakmor/ShadowMountPlus/releases
 
+
+## Latest Release
+
+<!-- latest-release:start -->
+**Super Shadowmount Plus FLZ 1.7beta11 by @FLZZilla**
+
+- Release: `1.7beta11-ssmplusflz-r14`
+- Published: `2026-10-30`
+- Binary: `supershadowmountplusflz.elf`
+- SHA-256: `3957d73293ef9d4a8f8a4989c4c8c609922b13752745f8b9807a389f08340f89`
+- Download: https://github.com/z3r3lkio/SSMPlusFLZ-Releases/releases/tag/1.7beta11-ssmplusflz-r14
+
+<!-- latest-release:end -->
 
 ## Payload Manager source
 
